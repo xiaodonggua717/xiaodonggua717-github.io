@@ -6,18 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://xiaodonggua717.github.io">
-  <title>14 | Dgua的博客</title>
+  <title>apply/call/bind | Dgua的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前端学习路上的知识总结与随笔">
+  <meta name="description" content="一、作用call、apply、bind作用是改变函数执行时的上下文，简而言之就是改变函数运行时的this指向 那么什么情况下需要改变this的指向呢？下面举个例子 123456789const name&#x3D;&quot;lucy&quot;;const obj&#x3D;&amp;#123;    name:&quot;martin&quot;,    say:function () &amp;#123;        con">
 <meta property="og:type" content="article">
-<meta property="og:title" content="14">
-<meta property="og:url" content="https://xiaodonggua717.github.io/2021/09/28/14/index.html">
+<meta property="og:title" content="apply&#x2F;call&#x2F;bind">
+<meta property="og:url" content="https://xiaodonggua717.github.io/2021/05/28/apply%E3%80%81call%E3%80%81bind/index.html">
 <meta property="og:site_name" content="Dgua的博客">
-<meta property="og:description" content="前端学习路上的知识总结与随笔">
+<meta property="og:description" content="一、作用call、apply、bind作用是改变函数执行时的上下文，简而言之就是改变函数运行时的this指向 那么什么情况下需要改变this的指向呢？下面举个例子 123456789const name&#x3D;&quot;lucy&quot;;const obj&#x3D;&amp;#123;    name:&quot;martin&quot;,    say:function () &amp;#123;        con">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-09-27T20:36:20.000Z">
-<meta property="article:modified_time" content="2021-09-27T20:36:20.445Z">
+<meta property="article:published_time" content="2021-05-28T03:55:52.000Z">
+<meta property="article:modified_time" content="2021-10-08T06:24:01.179Z">
 <meta property="article:author" content="Dgua">
+<meta property="article:tag" content="JavaScript">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Dgua的博客" type="application/atom+xml">
@@ -136,27 +137,70 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-14" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-apply、call、bind" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      14
+      apply/call/bind
     </h1>
   
 
         
-        <a href="/2021/09/28/14/" class="archive-article-date">
-  	<time datetime="2021-09-27T20:36:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-28</time>
+        <a href="/2021/05/28/apply%E3%80%81call%E3%80%81bind/" class="archive-article-date">
+  	<time datetime="2021-05-28T03:55:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-28</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h2 id="一、作用"><a href="#一、作用" class="headerlink" title="一、作用"></a>一、作用</h2><p><code>call</code>、<code>apply</code>、<code>bind</code>作用是改变函数执行时的上下文，简而言之就是改变函数运行时的<code>this</code>指向</p>
+<p>那么什么情况下需要改变<code>this</code>的指向呢？下面举个例子</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> name=<span class="string">&quot;lucy&quot;</span>;</span><br><span class="line"><span class="keyword">const</span> obj=&#123;</span><br><span class="line">    <span class="attr">name</span>:<span class="string">&quot;martin&quot;</span>,</span><br><span class="line">    <span class="attr">say</span>:<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="built_in">this</span>.name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">obj.say(); <span class="comment">//martin，this指向obj对象</span></span><br><span class="line"><span class="built_in">setTimeout</span>(obj.say,<span class="number">0</span>); <span class="comment">//lucy，this指向window对象</span></span><br></pre></td></tr></table></figure>
+
+<p>从上面可以看到，正常情况<code>say</code>方法输出<code>martin</code></p>
+<p>但是我们把<code>say</code>放在<code>setTimeout</code>方法中，在定时器中是作为回调函数来执行的，因此回到主栈执行时是在全局执行上下文的环境中执行的，这时候<code>this</code>指向<code>window</code>，所以输出<code>lucy</code></p>
+<span id="more"></span>
+
+<p>我们实际需要的是<code>this</code>指向<code>obj</code>对象，这时候就需要该改变<code>this</code>指向了</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">setTimeout</span>(obj.say.bind(obj),<span class="number">0</span>); <span class="comment">//martin，this指向obj对象</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="二、区别"><a href="#二、区别" class="headerlink" title="二、区别"></a>二、区别</h2><p>下面再来看看<code>apply</code>、<code>call</code>、<code>bind</code>的使用</p>
+<h3 id="apply"><a href="#apply" class="headerlink" title="apply"></a>apply</h3><p><code>apply</code>接受两个参数，第一个参数是<code>this</code>的指向，第二个参数是函数接受的参数，以数组的形式传入</p>
+<p>改变<code>this</code>指向后原函数会立即执行，且此方法只是临时改变<code>this</code>指向一次</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">...args</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">this</span>,args);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> obj = &#123;</span><br><span class="line">    <span class="attr">myname</span>:<span class="string">&quot;张三&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">fn.apply(obj,[<span class="number">1</span>,<span class="number">2</span>]); <span class="comment">// this会变成传入的obj，传入的参数必须是一个数组；</span></span><br><span class="line">fn(<span class="number">1</span>,<span class="number">2</span>) <span class="comment">// this指向window</span></span><br></pre></td></tr></table></figure>
+
+<p>当第一个参数为<code>null</code>、<code>undefined</code>的时候，默认指向<code>window</code>(在浏览器中)</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fn.apply(<span class="literal">null</span>,[<span class="number">1</span>,<span class="number">2</span>]); <span class="comment">// this指向window</span></span><br><span class="line">fn.apply(<span class="literal">undefined</span>,[<span class="number">1</span>,<span class="number">2</span>]); <span class="comment">// this指向window</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="call"><a href="#call" class="headerlink" title="call"></a>call</h3><p><code>call</code>方法的第一个参数也是<code>this</code>的指向，后面传入的是一个参数列表</p>
+<p>跟<code>apply</code>一样，改变<code>this</code>指向后原函数会立即执行，且此方法只是临时改变<code>this</code>指向一次</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">...args</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">this</span>,args);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> obj = &#123;</span><br><span class="line">    <span class="attr">myname</span>:<span class="string">&quot;张三&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">fn.call(obj,<span class="number">1</span>,<span class="number">2</span>); <span class="comment">// this会变成传入的obj，传入的参数必须是一个数组；</span></span><br><span class="line">fn(<span class="number">1</span>,<span class="number">2</span>) <span class="comment">// this指向window</span></span><br></pre></td></tr></table></figure>
+
+<p>同样的，当第一个参数为<code>null</code>、<code>undefined</code>的时候，默认指向<code>window</code>(在浏览器中)</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fn.call(<span class="literal">null</span>,[<span class="number">1</span>,<span class="number">2</span>]); <span class="comment">// this指向window</span></span><br><span class="line">fn.call(<span class="literal">undefined</span>,[<span class="number">1</span>,<span class="number">2</span>]); <span class="comment">// this指向window</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="bind"><a href="#bind" class="headerlink" title="bind"></a>bind</h3><p>bind方法和call很相似，第一参数也是<code>this</code>的指向，后面传入的也是一个参数列表(但是这个参数列表可以分多次传入)</p>
+<p>改变<code>this</code>指向后不会立即执行，而是返回一个永久改变<code>this</code>指向的函数</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">...args</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">this</span>,args);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> obj = &#123;</span><br><span class="line">    <span class="attr">myname</span>:<span class="string">&quot;张三&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> bindFn = fn.bind(obj); <span class="comment">// this 也会变成传入的obj ，bind不是立即执行需要执行一次</span></span><br><span class="line">bindFn(<span class="number">1</span>,<span class="number">2</span>) <span class="comment">// this指向obj</span></span><br><span class="line">fn(<span class="number">1</span>,<span class="number">2</span>) <span class="comment">// this指向window</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><p>从上面可以看到，<code>apply</code>、<code>call</code>、<code>bind</code>三者的区别在于：</p>
+<ul>
+<li>三者都可以改变函数的<code>this</code>对象指向</li>
+<li>三者第一个参数都是<code>this</code>要指向的对象，如果如果没有这个参数或参数为<code>undefined</code>或<code>null</code>，则默认指向全局<code>window</code></li>
+<li>三者都可以传参，但是<code>apply</code>是数组，而<code>call</code>是参数列表，且<code>apply</code>和<code>call</code>是一次性传入参数，而<code>bind</code>可以分为多次传入</li>
+<li><code>bind</code>是返回绑定this之后的函数，<code>apply</code>、<code>call</code> 则是立即执行</li>
+</ul>
+<h2 id="三、实现"><a href="#三、实现" class="headerlink" title="三、实现"></a>三、实现</h2><h3 id="apply-1"><a href="#apply-1" class="headerlink" title="apply"></a>apply</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Function</span>.prototype.myapply =<span class="function"><span class="keyword">function</span> (<span class="params">context = <span class="built_in">window</span> ,args</span>)</span></span><br><span class="line"><span class="function">      </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(<span class="keyword">typeof</span> <span class="built_in">this</span> !== <span class="string">&#x27;function&#x27;</span>)&#123;</span><br><span class="line">          <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">TypeError</span>(<span class="string">&#x27;Type Error&#x27;</span>)</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">const</span> fn = <span class="built_in">Symbol</span>(<span class="string">&#x27;fn&#x27;</span>)</span><br><span class="line">        context[fn] = <span class="built_in">this</span> </span><br><span class="line"></span><br><span class="line">        <span class="keyword">const</span> res = context[fn](...args)</span><br><span class="line">        <span class="keyword">delete</span> context[fn]</span><br><span class="line">        <span class="keyword">return</span> res</span><br><span class="line">      &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="call-1"><a href="#call-1" class="headerlink" title="call"></a>call</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Function</span>.prototype.myapply =<span class="function"><span class="keyword">function</span> (<span class="params">context = <span class="built_in">window</span> , ...args</span>)</span></span><br><span class="line"><span class="function">      </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(<span class="keyword">typeof</span> <span class="built_in">this</span> !== <span class="string">&#x27;function&#x27;</span>)&#123;</span><br><span class="line">          <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">TypeError</span>(<span class="string">&#x27;Type Error&#x27;</span>)</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">const</span> fn = <span class="built_in">Symbol</span>(<span class="string">&#x27;fn&#x27;</span>)</span><br><span class="line">        context[fn] = <span class="built_in">this</span> </span><br><span class="line"></span><br><span class="line">        <span class="keyword">const</span> res = context[fn](...args)</span><br><span class="line">        <span class="keyword">delete</span> context[fn]</span><br><span class="line">        <span class="keyword">return</span> res</span><br><span class="line">      &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="bind-1"><a href="#bind-1" class="headerlink" title="bind"></a>bind</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Function</span>.prototype.myapply =<span class="function"><span class="keyword">function</span> (<span class="params">context = <span class="built_in">window</span> ,args</span>)</span>&#123;</span><br><span class="line">       <span class="keyword">if</span>(<span class="keyword">typeof</span> <span class="built_in">this</span> !== <span class="string">&#x27;function&#x27;</span>)&#123;</span><br><span class="line">         <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">TypeError</span> (<span class="string">&#x27;type error&#x27;</span>)</span><br><span class="line">       &#125;</span><br><span class="line">      <span class="keyword">var</span> self =<span class="built_in">this</span></span><br><span class="line">      <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> <span class="title">F</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(self <span class="keyword">instanceof</span> F)&#123;</span><br><span class="line">          <span class="keyword">return</span> <span class="keyword">new</span> self(...args,...arguments)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> self.apply(context,[...args,...arguments])</span><br><span class="line">      &#125;</span><br><span class="line">     &#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id><a href="#" class="headerlink" title></a></h2>
       
 
       
@@ -164,6 +208,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -214,7 +269,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://xiaodonggua717.github.io/2021/09/28/14/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://xiaodonggua717.github.io/2021/05/28/apply%E3%80%81call%E3%80%81bind/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -228,9 +283,18 @@
   
 <nav id="article-nav">
   
+    <a href="/2021/06/21/%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          事件循环
+        
+      </div>
+    </a>
   
-    <a href="/2021/09/28/13/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">13</div>
+  
+    <a href="/2021/05/12/CSS3%E6%96%B0%E7%89%B9%E6%80%A7/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">CSS3新特性</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -257,7 +321,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    本文篇幅不长,没有目录噢
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E4%BD%9C%E7%94%A8"><span class="toc-number">1.</span> <span class="toc-text">一、作用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%8C%BA%E5%88%AB"><span class="toc-number">2.</span> <span class="toc-text">二、区别</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#apply"><span class="toc-number">2.1.</span> <span class="toc-text">apply</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#call"><span class="toc-number">2.2.</span> <span class="toc-text">call</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#bind"><span class="toc-number">2.3.</span> <span class="toc-text">bind</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%8F%E7%BB%93"><span class="toc-number">2.4.</span> <span class="toc-text">小结</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%AE%9E%E7%8E%B0"><span class="toc-number">3.</span> <span class="toc-text">三、实现</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#apply-1"><span class="toc-number">3.1.</span> <span class="toc-text">apply</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#call-1"><span class="toc-number">3.2.</span> <span class="toc-text">call</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#bind-1"><span class="toc-number">3.3.</span> <span class="toc-text">bind</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-number">4.</span> <span class="toc-text"></span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -285,7 +349,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">0字</span>
+        <span class="post-count">928字</span>
       </span>
     </span>
 
@@ -294,7 +358,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">1分</span>
+        <span class="post-count">4分</span>
       </span>
     </span>
 </div>
@@ -415,6 +479,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">gird布局</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">HTTP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Javascript</a>
               </li>
             
             <div class="clearfix"></div>

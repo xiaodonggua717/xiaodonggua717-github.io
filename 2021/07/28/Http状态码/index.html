@@ -6,18 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://xiaodonggua717.github.io">
-  <title>5 | Dgua的博客</title>
+  <title>Http状态码 | Dgua的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前端学习路上的知识总结与随笔">
+  <meta name="description" content="HTTP状态码1 信息，服务器收到请求，需要请求者继续执行操作 100 继续 101 切换协议 2  成功，操作被成功接收并处理 200 OK 201 已创建">
 <meta property="og:type" content="article">
-<meta property="og:title" content="5">
-<meta property="og:url" content="https://xiaodonggua717.github.io/2021/09/28/5/index.html">
+<meta property="og:title" content="Http状态码">
+<meta property="og:url" content="https://xiaodonggua717.github.io/2021/07/28/Http%E7%8A%B6%E6%80%81%E7%A0%81/index.html">
 <meta property="og:site_name" content="Dgua的博客">
-<meta property="og:description" content="前端学习路上的知识总结与随笔">
+<meta property="og:description" content="HTTP状态码1 信息，服务器收到请求，需要请求者继续执行操作 100 继续 101 切换协议 2  成功，操作被成功接收并处理 200 OK 201 已创建">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-09-27T20:35:30.000Z">
-<meta property="article:modified_time" content="2021-09-27T20:35:30.879Z">
+<meta property="article:published_time" content="2021-07-28T06:35:23.000Z">
+<meta property="article:modified_time" content="2021-10-08T06:09:47.426Z">
 <meta property="article:author" content="Dgua">
+<meta property="article:tag" content="HTTP">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Dgua的博客" type="application/atom+xml">
@@ -136,27 +137,73 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-5" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Http状态码" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      5
+      Http状态码
     </h1>
   
 
         
-        <a href="/2021/09/28/5/" class="archive-article-date">
-  	<time datetime="2021-09-27T20:35:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-28</time>
+        <a href="/2021/07/28/Http%E7%8A%B6%E6%80%81%E7%A0%81/" class="archive-article-date">
+  	<time datetime="2021-07-28T06:35:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-28</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h2 id="HTTP状态码"><a href="#HTTP状态码" class="headerlink" title="HTTP状态码"></a>HTTP状态码</h2><p><strong>1 信息，服务器收到请求，需要请求者继续执行操作</strong></p>
+<p>100 继续</p>
+<p>101 切换协议</p>
+<p><strong>2  成功，操作被成功接收并处理</strong></p>
+<p>200 OK</p>
+<p>201 已创建</p>
+<span id="more"></span>
+
+<p>202  已接受</p>
+<p>203 非授权信息</p>
+<p>204 无内容</p>
+<p>205 重置内容</p>
+<p>206 部分内容</p>
+<p><strong>3  重定向，需要进一步的操作以完成请求</strong></p>
+<p>300 多种选择</p>
+<p>301 永久移动</p>
+<p>302 临时移动</p>
+<p>303 其他地址</p>
+<p>304 未修改</p>
+<p>305 使用代理</p>
+<p>307 临时重定向</p>
+<p><strong>4 客户端错误，请求包含语法错误或无法完成请求</strong></p>
+<p>400 请求语法错误</p>
+<p>401 身份认证</p>
+<p>403 Forbidden 拒绝请求</p>
+<p>404 NOt found 服务器无法根据客户端的请求找到资源（网页）</p>
+<p>405 请求中的方法被禁止</p>
+<p>406 服务器无法根据客户端请求的内容特性完成请求</p>
+<p>407 请求要求代理的身份认证</p>
+<p>408 服务器等待客户端发送的请求时间过长</p>
+<p>409 服务器完成客户端的 PUT 请求时可能返回此代码，服务器处理请求时发生了冲突</p>
+<p>410 客户端请求的资源已经不存在</p>
+<p>411 服务器无法处理客户端发送的不带Content-Length的请求信息</p>
+<p>412 客户端请求信息的先决条件错误</p>
+<p>413 由于请求的实体过大，服务器无法处理，因此拒绝请求。</p>
+<p>414  请求的URI过长（URI通常为网址），服务器无法处理</p>
+<p>415 服务器无法处理请求附带的媒体格式</p>
+<p>416 客户端请求的范围无效</p>
+<p>417 服务器无法满足Expect的请求头信息</p>
+<p><strong>5 服务器错误，服务器在处理请求的过程中发生了错误</strong></p>
+<p>500 服务器内部错误，无法完成请求</p>
+<p>501  服务器不支持请求的功能，无法完成请求</p>
+<p>502 作为网关或者代理工作的服务器尝试执行请求时，从远程服务器接收到了一个无效的响应</p>
+<p>503 由于超载或系统维护，服务器暂时的无法处理客户端的请求。</p>
+<p>504 充当网关或代理的服务器，未及时从远端服务器获取请求</p>
+<p>505 服务器不支持请求的HTTP协议的版本，无法完成处理</p>
+
       
 
       
@@ -164,6 +211,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">HTTP</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -214,7 +272,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://xiaodonggua717.github.io/2021/09/28/5/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://xiaodonggua717.github.io/2021/07/28/Http%E7%8A%B6%E6%80%81%E7%A0%81/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -228,18 +286,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2021/09/28/6/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          6
-        
-      </div>
-    </a>
   
-  
-    <a href="/2021/09/28/4/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">4</div>
+    <a href="/2021/07/12/%E9%98%B2%E6%8A%96%E5%92%8C%E8%8A%82%E6%B5%81/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">防抖和节流</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -266,7 +315,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    本文篇幅不长,没有目录噢
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#HTTP%E7%8A%B6%E6%80%81%E7%A0%81"><span class="toc-number">1.</span> <span class="toc-text">HTTP状态码</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -294,7 +343,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">0字</span>
+        <span class="post-count">589字</span>
       </span>
     </span>
 
@@ -303,7 +352,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">1分</span>
+        <span class="post-count">2分</span>
       </span>
     </span>
 </div>
@@ -424,6 +473,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">gird布局</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">HTTP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Javascript</a>
               </li>
             
             <div class="clearfix"></div>

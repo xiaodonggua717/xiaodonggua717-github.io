@@ -136,26 +136,32 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-14" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Http状态码" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/09/28/14/">14</a>
+      <a class="article-title" href="/2021/07/28/Http%E7%8A%B6%E6%80%81%E7%A0%81/">Http状态码</a>
     </h1>
   
 
         
-        <a href="/2021/09/28/14/" class="archive-article-date">
-  	<time datetime="2021-09-27T20:36:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-28</time>
+        <a href="/2021/07/28/Http%E7%8A%B6%E6%80%81%E7%A0%81/" class="archive-article-date">
+  	<time datetime="2021-07-28T06:35:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-28</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
+        <h2 id="HTTP状态码"><a href="#HTTP状态码" class="headerlink" title="HTTP状态码"></a>HTTP状态码</h2><p><strong>1 信息，服务器收到请求，需要请求者继续执行操作</strong></p>
+<p>100 继续</p>
+<p>101 切换协议</p>
+<p><strong>2  成功，操作被成功接收并处理</strong></p>
+<p>200 OK</p>
+<p>201 已创建</p>
         
       
 
@@ -164,11 +170,22 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">HTTP</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/09/28/14/">展开全文 >></a>
+          <a class="article-more-a" href="/2021/07/28/Http%E7%8A%B6%E6%80%81%E7%A0%81/">展开全文 >></a>
         </p>
       
 
@@ -203,7 +220,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">0字</span>
+        <span class="post-count">589字</span>
       </span>
     </span>
 
@@ -212,33 +229,40 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">1分</span>
+        <span class="post-count">2分</span>
       </span>
     </span>
 </div>
 
 
   
-    <article id="post-13" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-防抖和节流" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/09/28/13/">13</a>
+      <a class="article-title" href="/2021/07/12/%E9%98%B2%E6%8A%96%E5%92%8C%E8%8A%82%E6%B5%81/">防抖和节流</a>
     </h1>
   
 
         
-        <a href="/2021/09/28/13/" class="archive-article-date">
-  	<time datetime="2021-09-27T20:36:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-28</time>
+        <a href="/2021/07/12/%E9%98%B2%E6%8A%96%E5%92%8C%E8%8A%82%E6%B5%81/" class="archive-article-date">
+  	<time datetime="2021-07-12T09:15:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-12</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
+        <h1 id="防抖和节流"><a href="#防抖和节流" class="headerlink" title="防抖和节流"></a>防抖和节流</h1><p>防抖和节流本质上是优化高频率执行代码的一种手段</p>
+<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><ul>
+<li>节流:规定一个单位时间，在这个单位时间内，触发事件的回调函数最多只能有一次执行</li>
+<li>防抖: 事件被触发n秒后执行回调函数,如果这期间事件再次被触发,则重新计时</li>
+</ul>
+<p>如：浏览器的 <code>resize</code>、<code>scroll</code>、<code>keypress</code>、<code>mousemove</code> 等事件在触发时，会不断地调用绑定在事件上的回调函数，极大地浪费资源，降低前端性能</p>
+<p>为了优化体验，需要对这类事件进行调用次数的限制，对此我们就可以采用<code>throttle</code>（防抖）和<code>debounce</code>（节流）的方式来减少调用频率</p>
         
       
 
@@ -247,11 +271,22 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/09/28/13/">展开全文 >></a>
+          <a class="article-more-a" href="/2021/07/12/%E9%98%B2%E6%8A%96%E5%92%8C%E8%8A%82%E6%B5%81/">展开全文 >></a>
         </p>
       
 
@@ -286,7 +321,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">0字</span>
+        <span class="post-count">583字</span>
       </span>
     </span>
 
@@ -295,33 +330,39 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">1分</span>
+        <span class="post-count">2分</span>
       </span>
     </span>
 </div>
 
 
   
-    <article id="post-10" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-事件循环" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/09/28/10/">10</a>
+      <a class="article-title" href="/2021/06/21/%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/">事件循环</a>
     </h1>
   
 
         
-        <a href="/2021/09/28/10/" class="archive-article-date">
-  	<time datetime="2021-09-27T20:36:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-28</time>
+        <a href="/2021/06/21/%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/" class="archive-article-date">
+  	<time datetime="2021-06-21T04:32:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-21</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
+        <h1 id="事件循环"><a href="#事件循环" class="headerlink" title="事件循环"></a>事件循环</h1><h2 id="浏览器事件循环"><a href="#浏览器事件循环" class="headerlink" title="浏览器事件循环"></a>浏览器事件循环</h2><p>在<code>JavaScript</code>中，所有的任务都可以分为</p>
+<ul>
+<li>同步任务：立即执行的任务，同步任务一般会直接进入到主线程中执行</li>
+<li>异步任务：异步执行的任务，比如<code>ajax</code>网络请求，<code>setTimeout</code>定时函数等</li>
+</ul>
+<p>而异步任务又可以分成微任务和宏任务</p>
         
       
 
@@ -330,11 +371,22 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Javascript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/09/28/10/">展开全文 >></a>
+          <a class="article-more-a" href="/2021/06/21/%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/">展开全文 >></a>
         </p>
       
 
@@ -369,7 +421,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">0字</span>
+        <span class="post-count">947字</span>
       </span>
     </span>
 
@@ -378,33 +430,39 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">1分</span>
+        <span class="post-count">3分</span>
       </span>
     </span>
 </div>
 
 
   
-    <article id="post-9" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-apply、call、bind" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/09/28/9/">9</a>
+      <a class="article-title" href="/2021/05/28/apply%E3%80%81call%E3%80%81bind/">apply/call/bind</a>
     </h1>
   
 
         
-        <a href="/2021/09/28/9/" class="archive-article-date">
-  	<time datetime="2021-09-27T20:35:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-28</time>
+        <a href="/2021/05/28/apply%E3%80%81call%E3%80%81bind/" class="archive-article-date">
+  	<time datetime="2021-05-28T03:55:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-28</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
+        <h2 id="一、作用"><a href="#一、作用" class="headerlink" title="一、作用"></a>一、作用</h2><p><code>call</code>、<code>apply</code>、<code>bind</code>作用是改变函数执行时的上下文，简而言之就是改变函数运行时的<code>this</code>指向</p>
+<p>那么什么情况下需要改变<code>this</code>的指向呢？下面举个例子</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> name=<span class="string">&quot;lucy&quot;</span>;</span><br><span class="line"><span class="keyword">const</span> obj=&#123;</span><br><span class="line">    <span class="attr">name</span>:<span class="string">&quot;martin&quot;</span>,</span><br><span class="line">    <span class="attr">say</span>:<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="built_in">this</span>.name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">obj.say(); <span class="comment">//martin，this指向obj对象</span></span><br><span class="line"><span class="built_in">setTimeout</span>(obj.say,<span class="number">0</span>); <span class="comment">//lucy，this指向window对象</span></span><br></pre></td></tr></table></figure>
+
+<p>从上面可以看到，正常情况<code>say</code>方法输出<code>martin</code></p>
+<p>但是我们把<code>say</code>放在<code>setTimeout</code>方法中，在定时器中是作为回调函数来执行的，因此回到主栈执行时是在全局执行上下文的环境中执行的，这时候<code>this</code>指向<code>window</code>，所以输出<code>lucy</code></p>
         
       
 
@@ -413,11 +471,22 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/09/28/9/">展开全文 >></a>
+          <a class="article-more-a" href="/2021/05/28/apply%E3%80%81call%E3%80%81bind/">展开全文 >></a>
         </p>
       
 
@@ -452,7 +521,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">0字</span>
+        <span class="post-count">928字</span>
       </span>
     </span>
 
@@ -461,34 +530,236 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">1分</span>
+        <span class="post-count">4分</span>
       </span>
     </span>
 </div>
 
 
   
-    <article id="post-8" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-CSS3新特性" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/09/28/8/">8</a>
+      <a class="article-title" href="/2021/05/12/CSS3%E6%96%B0%E7%89%B9%E6%80%A7/">CSS3新特性</a>
     </h1>
   
 
         
-        <a href="/2021/09/28/8/" class="archive-article-date">
-  	<time datetime="2021-09-27T20:35:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-28</time>
+        <a href="/2021/05/12/CSS3%E6%96%B0%E7%89%B9%E6%80%A7/" class="archive-article-date">
+  	<time datetime="2021-05-12T04:35:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-12</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="CSS新特性一览"><a href="#CSS新特性一览" class="headerlink" title="CSS新特性一览"></a>CSS新特性一览</h1><p><code>css</code>，即层叠样式表（Cascading Style Sheets）的简称，是一种标记语言，由浏览器解释执行用来使页面变得更美观</p>
+<p><code>css3</code>是<code>css</code>的最新标准，是向后兼容的，<code>CSS1/2</code>的特性在<code>CSS3</code> 里都是可以使用的</p>
+<p>而<code>CSS3</code> 也增加了很多新特性，为开发带来了更佳的开发体验</p>
+<h2 id="新的选择器"><a href="#新的选择器" class="headerlink" title="新的选择器"></a>新的选择器</h2><p><code>css3</code>中新增了一些选择器，</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">element1~element2</span><br><span class="line">选择前面有element1元素的每个element2</span><br></pre></td></tr></table></figure>
+
+<p>属性选择器</p>
+<table>
+<thead>
+<tr>
+<th align="center">选择器</th>
+<th align="center">功能描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">E[attribute]</td>
+<td align="center">选取带有指定属性的元素</td>
+</tr>
+<tr>
+<td align="center">E[attribute=value]</td>
+<td align="center">选取带有指定属性和值的元素</td>
+</tr>
+<tr>
+<td align="center">E[attr^=“val”]</td>
+<td align="center">匹配属性attr的值以指定值”val”开头的每个元素</td>
+</tr>
+<tr>
+<td align="center">E[attr$=“val”]</td>
+<td align="center">匹配属性attr的值以指定值”val”结尾的元素</td>
+</tr>
+<tr>
+<td align="center">E[attr*=“val”]</td>
+<td align="center">匹配属性attr的值包含字符串”val”元素</td>
+</tr>
+</tbody></table>
+<p>结构伪类选择器</p>
+<table>
+<thead>
+<tr>
+<th align="center">选择</th>
+<th align="center">功能描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">:root</td>
+<td align="center">选择匹配文档的根元素</td>
+</tr>
+<tr>
+<td align="center">E:nth-child(n)</td>
+<td align="center">选择所有在其父元素中的第n个位置的匹配E的子元素</td>
+</tr>
+<tr>
+<td align="center">E:nth-last-child(n)</td>
+<td align="center">选择所有在其父元素中倒数第n个位置的匹配E的子元素</td>
+</tr>
+<tr>
+<td align="center">E:nth-of-type(n)</td>
+<td align="center">选择所有在其父元素中同类型第n个位置的匹配E的子元素</td>
+</tr>
+<tr>
+<td align="center">E:nth-last-of-type(n)</td>
+<td align="center">选择所有在其父元素中同类型倒数第n个位置的匹配E的子元素</td>
+</tr>
+<tr>
+<td align="center">E:last-child</td>
+<td align="center">选择位于其父元素中最后一个位置，且匹配E的子元素 ，与E:nth-last-child(1)等同</td>
+</tr>
+<tr>
+<td align="center">E:fisrt-child</td>
+<td align="center">选择位于其父元素中第一个位置，且匹配E的子元素 ，与E:nth-child(1)等同</td>
+</tr>
+<tr>
+<td align="center">E:empty</td>
+<td align="center">选择匹配E的元素，且该元素不包含子元素。</td>
+</tr>
+<tr>
+<td align="center">E:only-child</td>
+<td align="center">选择在其父元素中只包含一个子元素，且该子元素匹配E。</td>
+</tr>
+<tr>
+<td align="center">E:first-of-type</td>
+<td align="center">选择在其父元素中匹配E的第一个同类型子元素</td>
+</tr>
+<tr>
+<td align="center">E:last-of-type</td>
+<td align="center">选择在其父元素中匹配E的最后一个同类型子元素</td>
+</tr>
+<tr>
+<td align="center">E:only-of-type</td>
+<td align="center">选择在其父元素中只包含一个同类型子元素，且该子元素匹配E。</td>
+</tr>
+</tbody></table>
+<h2 id="新的样式"><a href="#新的样式" class="headerlink" title="新的样式"></a>新的样式</h2><h3 id="边框"><a href="#边框" class="headerlink" title="边框"></a>边框</h3><p><code>css3</code>新增了三个边框属性，分别是：</p>
+<ul>
+<li>border-radius：创建圆角边框</li>
+<li>box-shadow：为元素添加阴影</li>
+<li>border-image：使用图片来绘制边框</li>
+</ul>
+<h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>新增了几个关于背景的属性，分别是<code>background-clip</code>、<code>background-origin</code>、<code>background-size</code>和<code>background-break</code></p>
+<h4 id="background-clip"><a href="#background-clip" class="headerlink" title="background-clip"></a>background-clip</h4><p>用于确定背景画区，有以下几种可能的属性：</p>
+<ul>
+<li>background-clip: border-box; 背景从border开始显示</li>
+<li>background-clip: padding-box; 背景从padding开始显示</li>
+<li>background-clip: content-box; 背景显content区域开始显示</li>
+<li>background-clip: no-clip; 默认属性，等同于border-box</li>
+</ul>
+<p>通常情况，背景都是覆盖整个元素的，利用这个属性可以设定背景颜色或图片的覆盖范围</p>
+<h4 id="background-origin"><a href="#background-origin" class="headerlink" title="background-origin"></a>background-origin</h4><p>当我们设置背景图片时，图片是会以左上角对齐，但是是以<code>border</code>的左上角对齐还是以<code>padding</code>的左上角或者<code>content</code>的左上角对齐? <code>border-origin</code>正是用来设置这个的</p>
+<ul>
+<li>background-origin: border-box; 从border开始计算background-position</li>
+<li>background-origin: padding-box; 从padding开始计算background-position</li>
+<li>background-origin: content-box; 从content开始计算background-position</li>
+</ul>
+<p>默认情况是<code>padding-box</code>，即以<code>padding</code>的左上角为原点</p>
+<h4 id="background-size"><a href="#background-size" class="headerlink" title="background-size"></a>background-size</h4><p>background-size属性常用来调整背景图片的大小，主要用于设定图片本身。有以下可能的属性：</p>
+<ul>
+<li>background-size: contain; 缩小图片以适合元素（维持像素长宽比）</li>
+<li>background-size: cover; 扩展元素以填补元素（维持像素长宽比）</li>
+<li>background-size: 100px 100px; 缩小图片至指定的大小</li>
+<li>background-size: 50% 100%; 缩小图片至指定的大小，百分比是相对包 含元素的尺寸</li>
+</ul>
+<h4 id="background-break"><a href="#background-break" class="headerlink" title="background-break"></a>background-break</h4><p>元素可以被分成几个独立的盒子（如使内联元素span跨越多行），<code>background-break</code> 属性用来控制背景怎样在这些不同的盒子中显示</p>
+<ul>
+<li>background-break: continuous; 默认值。忽略盒之间的距离（也就是像元素没有分成多个盒子，依然是一个整体一样）</li>
+<li>background-break: bounding-box; 把盒之间的距离计算在内；</li>
+<li>background-break: each-box; 为每个盒子单独重绘背景</li>
+</ul>
+<h3 id="文字"><a href="#文字" class="headerlink" title="文字"></a>文字</h3><h4 id="word-wrap"><a href="#word-wrap" class="headerlink" title="word-wrap"></a>word-wrap</h4><p>语法：<code>word-wrap: normal|break-word</code></p>
+<ul>
+<li>normal：使用浏览器默认的换行</li>
+<li>break-all：允许在单词内换行</li>
+</ul>
+<h4 id="text-overflow"><a href="#text-overflow" class="headerlink" title="text-overflow"></a>text-overflow</h4><p><code>text-overflow</code>设置或检索当当前行超过指定容器的边界时如何显示，属性有两个值选择：</p>
+<ul>
+<li>clip：修剪文本</li>
+<li>ellipsis：显示省略符号来代表被修剪的文本</li>
+</ul>
+<h4 id="text-shadow"><a href="#text-shadow" class="headerlink" title="text-shadow"></a>text-shadow</h4><p><code>text-shadow</code>可向文本应用阴影。能够规定水平阴影、垂直阴影、模糊距离，以及阴影的颜色</p>
+<h4 id="text-decoration"><a href="#text-decoration" class="headerlink" title="text-decoration"></a>text-decoration</h4><p>CSS3里面开始支持对文字的更深层次的渲染，具体有三个属性可供设置：</p>
+<ul>
+<li>text-fill-color: 设置文字内部填充颜色</li>
+<li>text-stroke-color: 设置文字边界填充颜色</li>
+<li>text-stroke-width: 设置文字边界宽度</li>
+</ul>
+<h3 id="颜色"><a href="#颜色" class="headerlink" title="颜色"></a>颜色</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">css3`新增了新的颜色表示方式`rgba`与`hsla</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>rgba分为两部分，rgb为颜色值，a为透明度</li>
+<li>hala分为四部分，h为色相，s为饱和度，l为亮度，a为透明度</li>
+</ul>
+<h2 id="transition"><a href="#transition" class="headerlink" title="transition"></a>transition</h2><p><code>transition</code>属性可以被指定为一个或多个<code>CSS</code>属性的过渡效果，多个属性之间用逗号进行分隔，必须规定两项内容：</p>
+<ul>
+<li>过度效果</li>
+<li>持续时间</li>
+</ul>
+<p>语法如下：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">transition</span>： CSS属性，花费时间，效果曲线(默认ease)，延迟时间(默认<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+
+<p>上面为简写模式，也可以分开写各个属性</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">transition-property</span>: width; </span><br><span class="line"><span class="attribute">transition-duration</span>: <span class="number">1s</span>;</span><br><span class="line"><span class="attribute">transition-timing-function</span>: linear;</span><br><span class="line"><span class="attribute">transition-delay</span>: <span class="number">2s</span>;</span><br></pre></td></tr></table></figure>
+
+<h2 id="animation"><a href="#animation" class="headerlink" title="animation"></a>animation</h2><p>animation也有很多的属性</p>
+<ul>
+<li>animation-name：动画名称</li>
+<li>animation-duration：动画持续时间</li>
+<li>animation-timing-function：动画时间函数</li>
+<li>animation-delay：动画延迟时间</li>
+<li>animation-iteration-count：动画执行次数，可以设置为一个整数，也可以设置为infinite，意思是无限循环</li>
+<li>animation-direction：动画执行方向</li>
+<li>animation-paly-state：动画播放状态</li>
+<li>animation-fill-mode：动画填充模式</li>
+</ul>
+<h2 id="渐变"><a href="#渐变" class="headerlink" title="渐变"></a>渐变</h2><p>颜色渐变是指在两个颜色之间平稳的过渡，<code>css3</code>渐变包括</p>
+<ul>
+<li>linear-gradient：线性渐变</li>
+</ul>
+<blockquote>
+<p>background-image: linear-gradient(direction, color-stop1, color-stop2, …);</p>
+</blockquote>
+<ul>
+<li>radial-gradient：径向渐变</li>
+</ul>
+<blockquote>
+<p>linear-gradient(0deg, red, green);</p>
+</blockquote>
+<h2 id="transform-转换"><a href="#transform-转换" class="headerlink" title="transform 转换"></a>transform 转换</h2><p><code>transform</code>属性允许旋转，缩放，倾斜或平移给定元素</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">transform-origin`：转换元素的位置（围绕那个点进行转换），默认值为`(x,y,z):(50%,50%,0)</span><br></pre></td></tr></table></figure>
+
+<p>使用方式：</p>
+<ul>
+<li>transform: translate(120px, 50%)：位移</li>
+<li>transform: scale(2, 0.5)：缩放</li>
+<li>transform: rotate(0.5turn)：旋转</li>
+<li>transform: skew(30deg, 20deg)：倾斜</li>
+</ul>
+<h2 id="flex弹性布局、Grid栅格布局"><a href="#flex弹性布局、Grid栅格布局" class="headerlink" title="flex弹性布局、Grid栅格布局"></a>flex弹性布局、Grid栅格布局</h2><p>已经写了相关笔记</p>
+<p><a href="https://xiaodonggua717.github.io/2021/04/28/grid%E5%B8%83%E5%B1%80%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">grid布局的基础知识 | Dgua的博客 (xiaodonggua717.github.io)</a></p>
+<p><a href="https://xiaodonggua717.github.io/2021/04/15/flex/">对flex布局的认识 | Dgua的博客 (xiaodonggua717.github.io)</a></p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://juejin.cn/post/6844903518520901639#heading-1">https://juejin.cn/post/6844903518520901639#heading-1</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.w3school.com.cn/css/index.asp">https://www.w3school.com.cn/css/index.asp</a></li>
+</ul>
+
       
 
       
@@ -496,11 +767,22 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/09/28/8/">展开全文 >></a>
+          <a class="article-more-a" href="/2021/05/12/CSS3%E6%96%B0%E7%89%B9%E6%80%A7/">展开全文 >></a>
         </p>
       
 
@@ -535,7 +817,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">0字</span>
+        <span class="post-count">1.7k字</span>
       </span>
     </span>
 
@@ -544,33 +826,40 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">1分</span>
+        <span class="post-count">6分</span>
       </span>
     </span>
 </div>
 
 
   
-    <article id="post-7" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-深拷贝和浅拷贝" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/09/28/7/">7</a>
+      <a class="article-title" href="/2021/05/12/%E6%B7%B1%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B5%85%E6%8B%B7%E8%B4%9D/">深拷贝和浅拷贝</a>
     </h1>
   
 
         
-        <a href="/2021/09/28/7/" class="archive-article-date">
-  	<time datetime="2021-09-27T20:35:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-28</time>
+        <a href="/2021/05/12/%E6%B7%B1%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B5%85%E6%8B%B7%E8%B4%9D/" class="archive-article-date">
+  	<time datetime="2021-05-11T22:42:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-12</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
+        <h2 id="一、数据类型存储"><a href="#一、数据类型存储" class="headerlink" title="一、数据类型存储"></a>一、数据类型存储</h2><p>前面文章我们讲到，<code>JavaScript</code>中存在两大数据类型：</p>
+<ul>
+<li>基本类型</li>
+<li>引用类型</li>
+</ul>
+<p>基本类型数据保存在在栈内存中</p>
+<p>引用类型数据保存在堆内存中，引用数据类型的变量是一个指向堆内存中实际对象的引用，存在栈中</p>
         
       
 
@@ -579,11 +868,22 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/09/28/7/">展开全文 >></a>
+          <a class="article-more-a" href="/2021/05/12/%E6%B7%B1%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B5%85%E6%8B%B7%E8%B4%9D/">展开全文 >></a>
         </p>
       
 
@@ -618,7 +918,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">0字</span>
+        <span class="post-count">1.3k字</span>
       </span>
     </span>
 
@@ -627,33 +927,36 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">1分</span>
+        <span class="post-count">5分</span>
       </span>
     </span>
 </div>
 
 
   
-    <article id="post-6" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-==和===" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/09/28/6/">6</a>
+      <a class="article-title" href="/2021/05/02/==%E5%92%8C===/">==和===的区别</a>
     </h1>
   
 
         
-        <a href="/2021/09/28/6/" class="archive-article-date">
-  	<time datetime="2021-09-27T20:35:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-28</time>
+        <a href="/2021/05/02/==%E5%92%8C===/" class="archive-article-date">
+  	<time datetime="2021-05-02T01:35:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-02</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
+        <h2 id="一、等于操作符"><a href="#一、等于操作符" class="headerlink" title="一、等于操作符"></a>一、等于操作符</h2><p>等于操作符用两个等于号（ == ）表示，如果操作数相等，则会返回 <code>true</code></p>
+<p>在<code>JavaScript</code>中存在隐式转换。等于操作符（==）在比较中会先进行类型转换，再确定操作数是否相等</p>
+<p>遵循以下规则：</p>
         
       
 
@@ -662,11 +965,22 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/09/28/6/">展开全文 >></a>
+          <a class="article-more-a" href="/2021/05/02/==%E5%92%8C===/">展开全文 >></a>
         </p>
       
 
@@ -701,7 +1015,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">0字</span>
+        <span class="post-count">782字</span>
       </span>
     </span>
 
@@ -710,33 +1024,48 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">1分</span>
+        <span class="post-count">3分</span>
       </span>
     </span>
 </div>
 
 
   
-    <article id="post-5" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-JavaScript数据类型及判断" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/09/28/5/">5</a>
+      <a class="article-title" href="/2021/05/01/JavaScript%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%8F%8A%E5%88%A4%E6%96%AD/">JavaScript数据类型及判断</a>
     </h1>
   
 
         
-        <a href="/2021/09/28/5/" class="archive-article-date">
-  	<time datetime="2021-09-27T20:35:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-28</time>
+        <a href="/2021/05/01/JavaScript%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%8F%8A%E5%88%A4%E6%96%AD/" class="archive-article-date">
+  	<time datetime="2021-05-01T06:02:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-01</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
+        <h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1><p>在<code>JavaScript</code>中，我们可以将数据类型分成两种类型：</p>
+<ul>
+<li>基本类型 </li>
+<li>复杂类型 也叫引用数据类型</li>
+</ul>
+<p>基本数据类型有七种:</p>
+<ol>
+<li>Number</li>
+<li>String</li>
+<li>Boolean</li>
+<li>undefined</li>
+<li>null</li>
+<li>symbol</li>
+<li>BigInt</li>
+</ol>
         
       
 
@@ -745,11 +1074,22 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/09/28/5/">展开全文 >></a>
+          <a class="article-more-a" href="/2021/05/01/JavaScript%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%8F%8A%E5%88%A4%E6%96%AD/">展开全文 >></a>
         </p>
       
 
@@ -784,7 +1124,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">0字</span>
+        <span class="post-count">763字</span>
       </span>
     </span>
 
@@ -793,33 +1133,37 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">1分</span>
+        <span class="post-count">2分</span>
       </span>
     </span>
 </div>
 
 
   
-    <article id="post-4" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-grid布局的基础知识" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/09/28/4/">4</a>
+      <a class="article-title" href="/2021/04/28/grid%E5%B8%83%E5%B1%80%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">grid布局的基础知识</a>
     </h1>
   
 
         
-        <a href="/2021/09/28/4/" class="archive-article-date">
-  	<time datetime="2021-09-27T20:35:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-28</time>
+        <a href="/2021/04/28/grid%E5%B8%83%E5%B1%80%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" class="archive-article-date">
+  	<time datetime="2021-04-28T04:44:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-28</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
+        <h1 id="grid布局"><a href="#grid布局" class="headerlink" title="grid布局"></a>grid布局</h1><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>网格布局（Grid）是最强大的 CSS 布局方案。</p>
+<p>它将网页划分成一个个网格，可以任意组合不同的网格，做出各种各样的布局。以前，只能通过复杂的 CSS 框架达到的效果，现在浏览器内置了。</p>
+<p>Flex 布局是轴线布局，只能指定”项目”针对轴线的位置，可以看作是<strong>一维布局</strong>。</p>
+<p>Grid 布局则是将容器划分成”行”和”列”，产生单元格，然后指定”项目所在”的单元格，可以看作是<strong>二维布局</strong>。Grid 布局远比 Flex 布局强大。</p>
         
       
 
@@ -828,11 +1172,22 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">gird布局</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/09/28/4/">展开全文 >></a>
+          <a class="article-more-a" href="/2021/04/28/grid%E5%B8%83%E5%B1%80%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">展开全文 >></a>
         </p>
       
 
@@ -867,7 +1222,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">0字</span>
+        <span class="post-count">1.7k字</span>
       </span>
     </span>
 
@@ -876,33 +1231,38 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">1分</span>
+        <span class="post-count">6分</span>
       </span>
     </span>
 </div>
 
 
   
-    <article id="post-3" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-JavaScript数组及函数的基本概念" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/09/28/3/">3</a>
+      <a class="article-title" href="/2021/04/27/JavaScript%E6%95%B0%E7%BB%84%E5%8F%8A%E5%87%BD%E6%95%B0%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">JavaScript数组及函数的基本概念</a>
     </h1>
   
 
         
-        <a href="/2021/09/28/3/" class="archive-article-date">
-  	<time datetime="2021-09-27T20:35:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-28</time>
+        <a href="/2021/04/27/JavaScript%E6%95%B0%E7%BB%84%E5%8F%8A%E5%87%BD%E6%95%B0%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" class="archive-article-date">
+  	<time datetime="2021-04-27T03:34:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-27</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
+        <h2 id="1-数组"><a href="#1-数组" class="headerlink" title="1 - 数组"></a>1 - 数组</h2><h3 id="1-1-数组的概念"><a href="#1-1-数组的概念" class="headerlink" title="1.1 数组的概念"></a>1.1 数组的概念</h3><ul>
+<li>数组可以把一组相关的数据一起存放，并提供方便的访问(获取）方式。</li>
+<li>数组是指<strong>一组数据的集合</strong>，其中的每个数据被称作<strong>元素</strong>，在数组中可以<strong>存放任意类型的元素</strong>。数组是一种将一组数据存储在单个变量名下的优雅方式。</li>
+</ul>
+<h3 id="1-2-创建数组"><a href="#1-2-创建数组" class="headerlink" title="1.2 创建数组"></a>1.2 创建数组</h3><p>JS 中创建数组有两种方式：</p>
         
       
 
@@ -911,11 +1271,22 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/09/28/3/">展开全文 >></a>
+          <a class="article-more-a" href="/2021/04/27/JavaScript%E6%95%B0%E7%BB%84%E5%8F%8A%E5%87%BD%E6%95%B0%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">展开全文 >></a>
         </p>
       
 
@@ -950,7 +1321,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">0字</span>
+        <span class="post-count">2.1k字</span>
       </span>
     </span>
 
@@ -959,7 +1330,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">1分</span>
+        <span class="post-count">7分</span>
       </span>
     </span>
 </div>
@@ -1088,6 +1459,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">gird布局</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">HTTP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Javascript</a>
               </li>
             
             <div class="clearfix"></div>
